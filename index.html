@@ -1,40 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#020406">
+  <meta name="theme-color" content="#000000">
   <title>VYPR | Digital Division</title>
   <meta name="description" content="VYPR Digital Marketplace">
 
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="module" src="script.js"></script>
 </head>
 
 <body>
 
-  <div class="background-grid"></div>
-  <div class="background-glow"></div>
-
-  <aside class="side-brand left">V Y P R</aside>
-  <aside class="side-brand right">V Y P R</aside>
-
   <!-- LOGIN -->
 
   <section id="auth">
 
     <div class="auth-status">
-      <span>● VYPR AUTH SYSTEM</span>
-      <span>SECURE CONNECTION</span>
+      <span><i class="status-dot"></i> VYPR auth system</span>
+      <span>Secure connection</span>
     </div>
 
     <div class="logo">VYPR<span>.</span></div>
-    <div class="tagline">YOUR DIGITAL WORLD STARTS HERE.</div>
+    <div class="tagline">Your digital world starts here.</div>
 
     <div class="auth-card">
 
@@ -42,29 +36,29 @@
         <div class="symbol">◈</div>
         <div>
           <h2 id="auth-title">IDENTITY VERIFICATION</h2>
-          <p>ACCESS THE VYPR NETWORK</p>
+          <p>Access the VYPR network</p>
         </div>
       </div>
 
       <div class="tabs">
-        <button id="login-tab" class="active">LOGIN</button>
-        <button id="register-tab">REGISTER</button>
+        <button id="login-tab" class="active" type="button">Login</button>
+        <button id="register-tab" type="button">Register</button>
       </div>
 
       <form id="auth-form">
 
         <div class="field hidden" id="username-field">
-          <label>USERNAME</label>
+          <label for="username">Username</label>
           <input id="username" type="text" maxlength="24" placeholder="Choose a username">
         </div>
 
         <div class="field">
-          <label>EMAIL ADDRESS</label>
+          <label for="email">Email address</label>
           <input id="email" type="email" required placeholder="name@example.com">
         </div>
 
         <div class="field">
-          <label>PASSWORD</label>
+          <label for="password">Password</label>
           <input id="password" type="password" required minlength="8" placeholder="Minimum 8 characters">
         </div>
 
@@ -76,15 +70,15 @@
 
       </form>
 
-      <div class="divider">OR CONTINUE WITH</div>
+      <div class="divider">or continue with</div>
 
-      <button class="discord-button" id="discord-login">
+      <button class="discord-button" id="discord-login" type="button">
         <span class="discord-symbol">D</span>
-        DISCORD LOGIN ↗
+        <span>Discord login ↗</span>
       </button>
 
       <div class="auth-bottom">
-        SECURE ACCESS // VYPR NETWORK
+        Secure access // VYPR network
       </div>
 
     </div>
@@ -98,23 +92,23 @@
 
       <header class="navbar">
 
-        <button class="brand" id="home-logo">
+        <button class="brand" id="home-logo" type="button">
           VYPR<span>.</span>
         </button>
 
         <nav class="nav-links" id="navigation">
-          <button data-page="home">HOME</button>
-          <button data-page="store">STORE</button>
-          <button data-page="account">ACCOUNT</button>
+          <button data-page="home" class="selected" type="button">Home</button>
+          <button data-page="store" type="button">Store</button>
+          <button data-page="account" type="button">Account</button>
         </nav>
 
         <div class="nav-right">
           <span class="status-dot"></span>
-          <span>CONNECTED</span>
-          <button class="icon-button" id="logout">↗</button>
+          <span>Connected</span>
+          <button class="icon-button" id="logout" type="button" aria-label="Sign out">↗</button>
         </div>
 
-        <button class="icon-button mobile-toggle" id="mobile-toggle">
+        <button class="icon-button mobile-toggle" id="mobile-toggle" type="button" aria-label="Menu">
           ☰
         </button>
 
@@ -126,12 +120,12 @@
 
         <div class="eyebrow">
           <span class="status-dot"></span>
-          DIGITAL DIVISION // 001
+          Digital Division
         </div>
 
         <h1>
-          ENTER THE<br>
-          <span>VYPR NETWORK.</span>
+          Enter the<br>
+          <span>VYPR network.</span>
         </h1>
 
         <p class="hero-description">
@@ -141,12 +135,12 @@
 
         <div class="feature-list">
 
-          <button class="feature-button" data-page="store">
+          <button class="feature-button" data-page="store" type="button">
             <div class="feature-icon">◈</div>
             <div class="feature-info">
-              <small>01 // MARKETPLACE</small>
-              <strong>DIGITAL PRODUCTS</strong>
-              <span>EXPLORE THE COLLECTION</span>
+              <small>Marketplace</small>
+              <strong>Digital products</strong>
+              <span>Explore the collection</span>
             </div>
             <div class="feature-arrow">↗</div>
           </button>
@@ -159,79 +153,9 @@
             <div class="feature-icon">⌘</div>
 
             <div class="feature-info">
-              <small>02 // CONNECTION</small>
-              <strong>SUPPORT CENTER</strong>
-              <span>CONNECT WITH OUR TEAM</span>
+              <small>Connection</small>
+              <strong>Support center</strong>
+              <span>Connect with our team</span>
             </div>
 
-            <div class="feature-arrow">↗</div>
-          </a>
-
-        </div>
-
-      </main>
-
-      <!-- STORE -->
-
-      <main id="store-page" class="content-page hidden">
-
-        <div class="page-label">01 // DIGITAL MARKETPLACE</div>
-
-        <h1>THE STORE<span>.</span></h1>
-
-        <p class="page-description">
-          Explore the VYPR digital collection.
-        </p>
-
-        <div class="empty-store">
-          <div class="empty-icon">◇</div>
-
-          <h2>NO PRODUCTS AVAILABLE</h2>
-
-          <p>
-            Our marketplace is currently being prepared.
-            We're working on something special.
-            Check back soon.
-          </p>
-
-          <small>STATUS: COLLECTION PENDING</small>
-        </div>
-
-      </main>
-
-      <!-- ACCOUNT -->
-
-      <main id="account-page" class="content-page hidden">
-
-        <div class="page-label">03 // USER PROFILE</div>
-
-        <h1>YOUR ACCOUNT<span>.</span></h1>
-
-        <div class="account-card">
-
-          <div class="empty-icon">◈</div>
-
-          <h2>ACCOUNT INFORMATION</h2>
-
-          <p id="account-email">Loading...</p>
-
-          <small id="account-id"></small>
-
-          <button class="cyber-button" id="account-logout">
-            SIGN OUT ↗
-          </button>
-
-        </div>
-
-      </main>
-
-      <footer class="footer">
-        <span>VYPR. DIGITAL DIVISION</span>
-        <span>© 2026 ALL RIGHTS RESERVED</span>
-      </footer>
-
-    </div>
-  </section>
-
-</body>
-</html>
+            <div
