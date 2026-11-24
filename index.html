@@ -2,53 +2,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VYPR 🥷</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#050505;color:white;font-family:Arial,sans-serif}
-header{padding:25px 8%;display:flex;justify-content:space-between;border-bottom:1px solid #252525}
-.logo{font-size:27px;font-weight:900;letter-spacing:3px}
-nav a{color:#aaa;text-decoration:none;margin-left:20px;font-size:13px}
-.hero{text-align:center;padding:130px 20px;background:radial-gradient(ellipse,#222,#050505 70%)}
-h1{font-size:clamp(45px,9vw,90px);letter-spacing:5px}
-p{color:#999;line-height:1.8}
-.btn{display:inline-block;background:white;color:black;padding:16px 28px;text-decoration:none;font-weight:bold;margin:15px}
-section{padding:70px 8%;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:850px;margin:35px auto}
-.card{background:#141414;border:1px solid #292929;padding:35px}
-footer{border-top:1px solid #292929;text-align:center;padding:30px;color:#777}
-@media(max-width:600px){nav a{margin-left:8px;font-size:10px}.grid{grid-template-columns:1fr}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020406">
+  <title>VYPR | Digital Division</title>
+  <meta name="description" content="VYPR Digital Marketplace">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="module" src="script.js"></script>
 </head>
+
 <body>
-<header>
-<div class="logo">VYPR 🥷</div>
-<nav>
-<a href="#">HOME</a>
-<a href="#store">STORE</a>
-<a href="#support">SUPPORT</a>
-</nav>
-</header>
-<main>
-<div class="hero">
-<p>THE OFFICIAL VYPR MARKETPLACE</p>
-<h1>WELCOME TO VYPR.</h1>
-<p>Premium gaming resources. Digital products. One destination.</p>
-<a class="btn" href="#store">EXPLORE STORE</a>
-<a class="btn" href="https://discord.gg/jkC5nmUPA">JOIN DISCORD</a>
-</div>
-<section id="store">
-<h2>EXPLORE OUR MARKETPLACE</h2>
-<div class="grid">
-<div class="card"><h3>🎮 FiveM</h3><p>Server assets and development resources.</p></div>
-<div class="card"><h3>🎯 Roblox</h3><p>Development tools and creator assets.</p></div>
-<div class="card"><h3>💎 Digital Products</h3><p>Premium digital resources.</p></div>
-<div class="card" id="support"><h3>🎫 Support</h3><p>Customer assistance and order help.</p></div>
-</div>
-</section>
-</main>
-<footer>VYPR 🥷 © 2026 · ALL RIGHTS RESERVED</footer>
+
+  <div class="background-grid"></div>
+  <div class="background-glow"></div>
+
+  <aside class="side-brand left">V Y P R</aside>
+  <aside class="side-brand right">V Y P R</aside>
+
+  <!-- LOGIN -->
+
+  <section id="auth">
+
+    <div class="auth-status">
+      <span>● VYPR AUTH SYSTEM</span>
+      <span>SECURE CONNECTION</span>
+    </div>
+
+    <div class="logo">VYPR<span>.</span></div>
+    <div class="tagline">YOUR DIGITAL WORLD STARTS HERE.</div>
+
+    <div class="auth-card">
+
+      <div class="auth-heading">
+        <div class="symbol">◈</div>
+        <div>
+          <h2 id="auth-title">IDENTITY VERIFICATION</h2>
+          <p>ACCESS THE VYPR NETWORK</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button id="login-tab" class="active">LOGIN</button>
+        <button id="register-tab">REGISTER</button>
+      </div>
+
+      <form id="auth-form">
+
+        <div class="field hidden" id="username-field">
+          <label>USERNAME</label>
+          <input id="username" type="text" maxlength="24" placeholder="Choose a username">
+        </div>
+
+        <div class="field">
+          <label>EMAIL ADDRESS</label>
+          <input id="email" type="email" required placeholder="name@example.com">
+        </div>
+
+        <div class="field">
+          <label>PASSWORD</label>
+          <input id="password" type="password" required minlength="8" placeholder="Minimum 8 characters">
+        </div>
+
+        <div id="auth-message" class="hidden"></div>
+
+        <button class="cyber-button" id="auth-submit" type="submit">
+          AUTHENTICATE ↗
+        </button>
+
+      </form>
+
+      <div class="divider">OR CONTINUE WITH</div>
+
+      <button class="discord-button" id="discord-login">
+        <span class="discord-symbol">D</span>
+        DISCORD LOGIN ↗
+      </button>
+
+      <div class="auth-bottom">
+        SECURE ACCESS // VYPR NETWORK
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN WEBSITE -->
+
+  <section id="website" class="hidden">
+
+    <div class="container">
+
+      <header class="navbar">
+
+        <button class="brand" id="home-logo">
+          VYPR<span>.</span>
+        </button>
+
+        <nav class="nav-links" id="navigation">
+          <button data-page="home">HOME</button>
+          <button data-page="store">STORE</button>
+          <button data-page="account">ACCOUNT</button>
+        </nav>
+
+        <div class="nav-right">
+          <span class="status-dot"></span>
+          <span>CONNECTED</span>
+          <button class="icon-button" id="logout">↗</button>
+        </div>
+
+        <button class="icon-button mobile-toggle" id="mobile-toggle">
+          ☰
+        </button>
+
+      </header>
+
+      <!-- HOME -->
+
+      <main id="home-page" class="hero">
+
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          DIGITAL DIVISION // 001
+        </div>
+
+        <h1>
+          ENTER THE<br>
+          <span>VYPR NETWORK.</span>
+        </h1>
+
+        <p class="hero-description">
+          A destination for premium digital products.
+          Discover what's next. Welcome to VYPR.
+        </p>
+
+        <div class="feature-list">
+
+          <button class="feature-button" data-page="store">
+            <div class="feature-icon">◈</div>
+            <div class="feature-info">
+              <small>01 // MARKETPLACE</small>
+              <strong>DIGITAL PRODUCTS</strong>
+              <span>EXPLORE THE COLLECTION</span>
+            </div>
+            <div class="feature-arrow">↗</div>
+          </button>
+
+          <a class="feature-button"
+             href="https://discord.gg/Hb2bsm7jq"
+             target="_blank"
+             rel="noopener noreferrer">
+
+            <div class="feature-icon">⌘</div>
+
+            <div class="feature-info">
+              <small>02 // CONNECTION</small>
+              <strong>SUPPORT CENTER</strong>
+              <span>CONNECT WITH OUR TEAM</span>
+            </div>
+
+            <div class="feature-arrow">↗</div>
+          </a>
+
+        </div>
+
+      </main>
+
+      <!-- STORE -->
+
+      <main id="store-page" class="content-page hidden">
+
+        <div class="page-label">01 // DIGITAL MARKETPLACE</div>
+
+        <h1>THE STORE<span>.</span></h1>
+
+        <p class="page-description">
+          Explore the VYPR digital collection.
+        </p>
+
+        <div class="empty-store">
+          <div class="empty-icon">◇</div>
+
+          <h2>NO PRODUCTS AVAILABLE</h2>
+
+          <p>
+            Our marketplace is currently being prepared.
+            We're working on something special.
+            Check back soon.
+          </p>
+
+          <small>STATUS: COLLECTION PENDING</small>
+        </div>
+
+      </main>
+
+      <!-- ACCOUNT -->
+
+      <main id="account-page" class="content-page hidden">
+
+        <div class="page-label">03 // USER PROFILE</div>
+
+        <h1>YOUR ACCOUNT<span>.</span></h1>
+
+        <div class="account-card">
+
+          <div class="empty-icon">◈</div>
+
+          <h2>ACCOUNT INFORMATION</h2>
+
+          <p id="account-email">Loading...</p>
+
+          <small id="account-id"></small>
+
+          <button class="cyber-button" id="account-logout">
+            SIGN OUT ↗
+          </button>
+
+        </div>
+
+      </main>
+
+      <footer class="footer">
+        <span>VYPR. DIGITAL DIVISION</span>
+        <span>© 2026 ALL RIGHTS RESERVED</span>
+      </footer>
+
+    </div>
+  </section>
+
 </body>
 </html>
