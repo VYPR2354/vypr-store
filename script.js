@@ -4,7 +4,7 @@ import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 /* VYPR CONFIGURATION */
 
 const SUPABASE_URL = "https://cdkklkyiwvhpjzmqxlxp.supabase.co";
-const SUPABASE_ANON_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+const SUPABASE_ANON_KEY = "sb_publishable_0vYJm7VfpmfC-auHC9QRDA_yWjI5rkf";
 
 const SITE_URL = "https://vypr2354.github.io/vypr-store/";
 
