@@ -223,13 +223,26 @@ function render() {
 
     const user = currentSession.user;
 
-    document.getElementById("account-email")
-      .textContent = user.email || "Discord account";
+    const metadata = user.user_metadata || {};
 
-    document.getElementById("account-id")
-      .textContent =
-        "MEMBER ID: " +
-        user.id.slice(0, 8).toUpperCase();
+const discordIdentity = user.identities?.find(
+  identity => identity.provider === "discord"
+);
+
+const discordData = discordIdentity?.identity_data || {};
+
+const username =
+  discordData.global_name ||
+  metadata.full_name ||
+  metadata.name ||
+  metadata.user_name ||
+  metadata.preferred_username ||
+  "VYPR Member";
+
+document.getElementById("account-email").textContent = username;
+
+document.getElementById("account-id").textContent =
+  "MEMBER ID: " + user.id.slice(0, 8).toUpperCase();
 
   }
 
