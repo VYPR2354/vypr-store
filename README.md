@@ -1,1 +1,0 @@
-# vypr-store
